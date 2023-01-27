@@ -595,6 +595,8 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .footer__social-image {
+    background: white;
+    border: 1px solid;
     height: 4rem;
 }
 
