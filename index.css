@@ -423,31 +423,7 @@ body:not(.user-is-tabbing) a:focus {
     max-width: var(--container-medium-width);
 }
 
-.form-message {
-    width: 100
-}
 
-.form-message, form, .form-email, .form-button {
-    color: white;
-    background-color: black
-}
-
-form {
-    display: flex;
-    width: 70%;
-}
-
-.form-email, .form-button {
-    border: 1px solid;
-    height: 30px;
-    width: 60%
-}
-
-.form-message {
-    resize: none;
-    line-height: normal;
-    height: 80px
-}
 
 /* --------------------------------------- */
 /* ----- Footer ----- */
@@ -486,6 +462,46 @@ form {
     transform: translateY(3px);
 }
 
+/* Media */
+
+@media (min-width: 501px) {
+
+    .email-button-container {
+        display: flex;
+        flex-direction: column
+    }
+
+    .form-message {
+        width: 80%;
+        resize: none;
+        line-height: normal;
+        height: 80px;
+        padding: 0.2em
+        }
+    
+    .form-message, .form-email, .form-button {
+        border-radius: 5px;
+        border: 1px solid;
+        margin: 0.5em 0;
+        color: white;
+        background-color: black
+    }
+    
+    .form-email, .form-button {
+        margin: 0.5em auto;
+        height: 30px;
+        width: 80%
+    }
+
+    form {
+        border: 1px solid;
+        align-items: center;
+        margin: auto;
+        display: flex;
+        width: 100%;
+    }
+}
+
 @media(max-width: 1000px) {
     html {
         font-size: 52%;
@@ -505,35 +521,15 @@ form {
 }
 
 @media(max-width: 600px) {
+
+    .row {
+        padding: 0 var(--gutter-small);
+    }
+
     .row {
         padding: 0 var(--gutter-normal);
     }
 }
-
-@media(max-width: 600px) {
-    .row {
-        padding: 0 var(--gutter-small);
-    }
-}
-
-@media(max-width: 900px) {
-    .heading-primary {
-        font-size: 6.5rem;
-    }
-}
-
-@media(max-width: 900px) {
-    p { 
-        max-width: var(--container-small-width);
-    }
-}
-
-@media(max-width: 900px) {
-    .back-to-top {
-        right: 2rem;
-    }
-}
-
 
 @media(max-width: 400px) {
     .nav__item:not(:last-child) {
@@ -547,14 +543,7 @@ form {
     }
 }
 
-@media(max-width: 900px) {
-    .work__box {
-        align-items: initial;
-        flex-direction: column-reverse;
-    }
-}
-
-@media(max-width: 500px) {
+@media(max-width: 500px) {  
 
     .heading-primary {
         font-size: var(--font-size-large);
@@ -601,6 +590,28 @@ form {
 }
 
 @media(max-width: 900px) {
+    .heading-primary {
+        font-size: 6.5rem;
+    }
+
+    p { 
+        max-width: var(--container-small-width);
+    }
+
+    .back-to-top {
+        right: 2rem;
+    }
+
+    .work__box {
+        align-items: initial;
+        flex-direction: column-reverse;
+    }
+
+    .about__content {
+        flex-direction: column-reverse;
+        align-items: initial;
+    }
+
     .work__code {
         height: 4rem;
     }
@@ -617,14 +628,8 @@ form {
     }
 }
 
-@media(max-width: 900px) {
-    .about__content {
-        flex-direction: column-reverse;
-        align-items: initial;
-    }
-}
-
 @media(min-width: 901px) {
+
     .about__text {
         flex: 0 0 35%;
     }
